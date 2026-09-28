@@ -1,0 +1,1604 @@
+8.2s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.2s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.2s 3 0.00s - to python to disable frozen modules.
+8.2s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.8s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.8s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.8s 7 0.00s - to python to disable frozen modules.
+8.8s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+16.6s 9 Device: cuda
+16.6s 10 GPU count: 2
+16.6s 11 GPU 0: Tesla T4 | capability=(7, 5) | memory=14.6 GiB
+16.6s 12 GPU 1: Tesla T4 | capability=(7, 5) | memory=14.6 GiB
+16.6s 13 Selected precision: fp16
+16.6s 14 GradScaler enabled: True
+16.7s 15 {
+16.7s 16 "model": {
+16.7s 17 "vocab_size": 10000,
+16.7s 18 "max_seq_len": 512,
+16.7s 19 "qkv_bias": false,
+16.7s 20 "d_model": 384,
+16.7s 21 "n_layers": 12,
+16.7s 22 "n_heads": 8,
+16.7s 23 "d_ff": 1536,
+16.7s 24 "dropout": 0.1
+16.7s 25 },
+16.7s 26 "training": {
+16.7s 27 "batch_size": 32,
+16.7s 28 "grad_accum_steps": 1,
+16.7s 29 "max_lr": 0.0006,
+16.7s 30 "min_lr": 6e-05,
+16.7s 31 "warmup_steps": 2000,
+16.7s 32 "weight_decay": 0.01,
+16.7s 33 "betas": [
+16.7s 34 0.9,
+16.7s 35 0.95
+16.7s 36 ],
+16.7s 37 "adam_eps": 1e-08,
+16.7s 38 "grad_clip": 1.0,
+16.7s 39 "log_interval": 50,
+16.7s 40 "eval_interval": 1000,
+16.7s 41 "eval_batches": 40,
+16.7s 42 "save_interval": 1000,
+16.7s 43 "archive_interval": 5000,
+16.7s 44 "target_tokens": 550000000,
+16.7s 45 "use_torch_compile": true,
+16.7s 46 "precision": "fp16",
+16.7s 47 "max_consecutive_nonfinite_skips": 20,
+16.7s 48 "amp_resume_scale_cap": 65536.0
+16.7s 49 }
+16.7s 50 }
+17.5s 51 Trainable parameters: 25,317,120
+17.6s 52 max |Δlogit| at protected position t=7: 0.000e+00
+17.6s 53 PASS: changing a future token cannot change earlier logits.
+17.7s 54 Tokenizer vocabulary: 10000
+17.7s 55 Model vocabulary: 10000
+17.8s 56 Total tokens in train.bin: 863,817,731
+17.8s 57 Effective sequences/update: 32
+17.8s 58 Tokens/update: 16,384
+17.8s 59 Max optimizer steps: 33,570
+145.9s 60 Validation lines: 6,069,130
+145.9s 61 Validation tokens: 121,187,521
+145.9s 62 Saved: /kaggle/working/telugu_val.bin
+145.9s 63 Validation sequences: 236,694
+146.2s 64 Packed batch: (32, 513) torch.uint16
+152.6s 65 Optimizer: fused AdamW
+155.6s 66 [Checkpoint] Selected resume file: /kaggle/input/datasets/sukaramba/telugu-phase2checkpoint/checkpoints_telugu/telugu_step_20000.pt (step 20,000)
+155.7s 67 Scheduler state restored.
+155.7s 68 GradScaler resume scale capped: 1.04858e+06 -> 65536
+155.7s 69 [Checkpoint] Resuming from step 20,000
+155.7s 70 [Checkpoint] Model parameters are finite.
+155.7s 71 DataParallel enabled across 2 GPUs.
+155.7s 72 Starting step: 20,000
+155.7s 73 Target final step: 33,570
+155.7s 74 Remaining optimizer updates: 13,570
+155.7s 75 LR for next step: 2.709676e-04
+509.5s 76 [Validation] step=21,000 | loss=5.0711 | ppl=159.35
+510.0s 77 [Checkpoint] latest saved at step 21,000
+866.8s 78 [Validation] step=22,000 | loss=5.0396 | ppl=154.41
+867.6s 79 [Checkpoint] latest saved at step 22,000
+1223.9s 80 [Validation] step=23,000 | loss=5.0058 | ppl=149.28
+1224.5s 81 [Checkpoint] latest saved at step 23,000
+1581.0s 82 [Validation] step=24,000 | loss=5.0625 | ppl=157.99
+1581.6s 83 [Checkpoint] latest saved at step 24,000
+1938.2s 84 [Validation] step=25,000 | loss=5.0292 | ppl=152.82
+1938.9s 85 [Checkpoint] latest saved at step 25,000
+1938.9s 86 [Checkpoint] archived -> ./checkpoints_telugu/telugu_step_25000.pt
+2295.9s 87 [Validation] step=26,000 | loss=5.0247 | ppl=152.13
+2296.6s 88 [Checkpoint] latest saved at step 26,000
+2653.3s 89 [Validation] step=27,000 | loss=4.9952 | ppl=147.70
+2653.9s 90 [Checkpoint] latest saved at step 27,000
+3010.8s 91 [Validation] step=28,000 | loss=5.0145 | ppl=150.57
+3011.4s 92 [Checkpoint] latest saved at step 28,000
+3368.2s 93 [Validation] step=29,000 | loss=4.9915 | ppl=147.16
+3368.8s 94 [Checkpoint] latest saved at step 29,000
+3725.8s 95 [Validation] step=30,000 | loss=5.0117 | ppl=150.16
+3726.4s 96 [Checkpoint] latest saved at step 30,000
+3726.4s 97 [Checkpoint] archived -> ./checkpoints_telugu/telugu_step_30000.pt
+3734.6s 98 [Stability] skipped non-finite update before step 30,023 | loss=4.271588325500488 | grad_norm=inf | scale=2097152.0->1048576.0
+4083.8s 99 [Validation] step=31,000 | loss=4.9835 | ppl=145.98
+4084.5s 100 [Checkpoint] latest saved at step 31,000
+4219.5s 101 [Stability] skipped non-finite update before step 31,384 | loss=4.09515905380249 | grad_norm=inf | scale=1048576.0->524288.0
+4441.4s 102 [Validation] step=32,000 | loss=4.9902 | ppl=146.96
+4442.0s 103 [Checkpoint] latest saved at step 32,000
+4723.3s 104 [Stability] skipped non-finite update before step 32,799 | loss=4.292509078979492 | grad_norm=inf | scale=524288.0->262144.0
+4799.1s 105 [Validation] step=33,000 | loss=5.0008 | ppl=148.53
+4799.7s 106 [Checkpoint] latest saved at step 33,000
+5000.5s 107 [Training] completed 33,570/33,570 optimizer steps | non-finite updates skipped: 3
+5000.5s 108 Training complete at step 33,570
+5025.5s 109 
+5025.5s 110 Held-out prefix:
+5025.5s 111 దీనికి సంబంధించి ప్రత్యేక కార్యక్రమాన్ని రూపొందించారు .
+5025.5s 112 చొరబాటుదారులను నడవండి !
+5025.5s 113 ధనుస్సుమీ భావోద్వేగాలను , ముఖ్యంగా కోపాన్ని నియంత్రించుకోండి .
+5025.5s 114 కరోనా కేసుల సంఖ్య పెరుగుతున్నందున కఠినమైన లాక్డౌన్ విధించే అవకాశం ఉందని ఠాక్రే ప్రభుత్వం వ్యక్తం చేసింది .
+5025.5s 115 సోమవారం నాడు ఆయన విదిశా కోర్టులో ముందస్తు బెయిల్ కోసం కూడా దరఖాస్తు చేశారు .
+5025.5s 116 ఇది మాత్రమే కాదు , అపరిశుభ్రమైన ప్రదేశాల్లో ఆహారాన్ని వండడం కూడా వెలుగులోకి వచ్చింది .
+5025.5s 117 ఈ సమయంలో సౌందర్య సాధనాలను ఉపయోగించేటప్పుడు గుర్తుంచుకోవలసిన కొన్ని విషయాలు ఉన్నాయి .
+5025.5s 118 గోవింద అతన్ని అక్కడి నుండి ఊటీకి తీసుకువెళ్ళాడు .
+5025.5s 119 మరోవైపు , రోష్మల్
+5025.5s 120 
+5025.5s 121 Reference continuation:
+5025.5s 122 గ్రామ పంచాయతీ 18 కిలోమీటర్ల దూరంలో ఉంది .
+5025.5s 123 అప్పుడు బీరు పోస్తారు మరియు బట్టలు క్షౌరం చేయబడతాయని అందరికీ తెలుసు .
+5025.5s 124 అలిబాగ్ పై వ్యాసం నుండి అదే అనుభవం వస్తుంది .
+5025.5s 125 నిందితుడిని అరెస్టు చేసి అతని కోసం గాలిస్తున్నారు .
+5025.5s 126 మరియు వారు దానిని వేడిగా ఉన్నందున తింటారు , చల్లగా ఉన్నందున కాదు
+5025.5s 127 
+5025.5s 128 greedy continuation:
+5025.5s 129 మరియు అలెగ్జాండర్ మధ్య యుద్ధం జరిగింది . ఈ రోజు , నేను మీతో మాట్లాడాను . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5025.5s 130 
+5025.5s 131 temperature_0.5 continuation:
+5025.5s 132 , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు , రాహు ,
+5025.5s 133 
+5025.5s 134 temperature_1.0 continuation:
+5025.5s 135 , రాహులోచట , కర్ూదాశరణ చిత్రాలతోనూ ఆమె తెలుగు ప్రేక్షకుల అభిమానానికి హృదయపూర్వక అభినందనలు . బలవంతపు వంతెనను చదివారు . ఈ కాలంలో పాకిస్తాన్కు కూడా భారత వైమానిక దళ అవసరాలకు ఆటంకం ఏర్పడిందని చెప్పబడుతుంది , కానీ జి హ్యోపియన్ నేషనల్ ఆర్మీ కూడా గగనతలానికి
+5025.5s 136 
+5025.5s 137 temperature_1.5 continuation:
+5025.5s 138 జన ధర్మాసనం లక్షల అయి ఉంటుంది . నిన్న గదిలో కలవకుండానే రాజేష్ నిర్మించిన చిత్రాల అద్భుతమైన ఫన్నీటీ పుస్తకాన్ని రూపొందించాడు . రెండు సిరీస్ బలాలు ప్రారంభమైన తరువాత ఒంటరి చదివా స్పందిస్తుంది . హోస్ట్ కాలం నాటికి చేయకూడదని నియమించిన సెంట్రల్ బ్యూరో సీ పరువు28 పాత్రలు ప్రతి రహదారి మార్కెట్లో ప్రాంతీయ హ్ ప్రయత్నిస్తాయి , చెయ్యబడతాయి తీసుకోవాలని అన్నారు మరియు మొదట డాలర్లు సిద్ధంగా ఆశ
+5025.5s 139 Layers captured: 12
+5025.5s 140 Layer-0 attention shape: (1, 8, 32, 32)
+5025.8s 141 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5025.8s 142 plt.tight_layout()
+5025.8s 143 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Matplotlib currently does not support Telugu natively.
+5025.8s 144 plt.tight_layout()
+5025.8s 145 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5025.8s 146 plt.tight_layout()
+5025.8s 147 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5025.8s 148 plt.tight_layout()
+5025.8s 149 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5025.8s 150 plt.tight_layout()
+5025.8s 151 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5025.8s 152 plt.tight_layout()
+5025.8s 153 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5025.8s 154 plt.tight_layout()
+5025.8s 155 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5025.8s 156 plt.tight_layout()
+5025.8s 157 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5025.8s 158 plt.tight_layout()
+5025.8s 159 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5025.8s 160 plt.tight_layout()
+5025.8s 161 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5025.8s 162 plt.tight_layout()
+5025.8s 163 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5025.8s 164 plt.tight_layout()
+5025.8s 165 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5025.8s 166 plt.tight_layout()
+5025.8s 167 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5025.8s 168 plt.tight_layout()
+5025.8s 169 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5025.8s 170 plt.tight_layout()
+5025.8s 171 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5025.8s 172 plt.tight_layout()
+5025.8s 173 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5025.8s 174 plt.tight_layout()
+5025.8s 175 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5025.8s 176 plt.tight_layout()
+5025.8s 177 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5025.8s 178 plt.tight_layout()
+5025.8s 179 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5025.8s 180 plt.tight_layout()
+5025.8s 181 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5025.8s 182 plt.tight_layout()
+5025.8s 183 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5025.8s 184 plt.tight_layout()
+5025.8s 185 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5025.8s 186 plt.tight_layout()
+5025.8s 187 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5025.8s 188 plt.tight_layout()
+5025.8s 189 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5025.8s 190 plt.tight_layout()
+5025.8s 191 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5025.8s 192 plt.tight_layout()
+5025.8s 193 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5025.8s 194 plt.tight_layout()
+5025.8s 195 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5025.8s 196 plt.tight_layout()
+5025.8s 197 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5025.8s 198 plt.tight_layout()
+5025.8s 199 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5025.8s 200 plt.tight_layout()
+5025.8s 201 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5025.8s 202 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 203 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Matplotlib currently does not support Telugu natively.
+5025.8s 204 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 205 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5025.8s 206 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 207 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5025.8s 208 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 209 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5025.8s 210 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 211 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5025.8s 212 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 213 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5025.8s 214 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 215 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5025.8s 216 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 217 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5025.8s 218 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 219 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5025.8s 220 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 221 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5025.8s 222 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 223 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5025.8s 224 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 225 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5025.8s 226 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 227 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5025.8s 228 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 229 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5025.8s 230 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 231 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5025.8s 232 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 233 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5025.8s 234 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 235 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5025.8s 236 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 237 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5025.8s 238 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 239 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5025.8s 240 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 241 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5025.8s 242 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 243 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5025.8s 244 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 245 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5025.8s 246 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 247 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5025.8s 248 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 249 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5025.8s 250 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 251 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5025.8s 252 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 253 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5025.8s 254 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 255 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5025.8s 256 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 257 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5025.8s 258 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 259 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5025.8s 260 fig.canvas.print_figure(bytes_io, **kw)
+5025.8s 261 
+5025.8s 262 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5025.8s 263 plt.tight_layout()
+5025.8s 264 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Matplotlib currently does not support Telugu natively.
+5025.8s 265 plt.tight_layout()
+5025.8s 266 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5025.8s 267 plt.tight_layout()
+5025.8s 268 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5025.8s 269 plt.tight_layout()
+5025.8s 270 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5025.8s 271 plt.tight_layout()
+5025.8s 272 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5025.8s 273 plt.tight_layout()
+5025.8s 274 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5025.8s 275 plt.tight_layout()
+5025.8s 276 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5025.8s 277 plt.tight_layout()
+5025.8s 278 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5025.8s 279 plt.tight_layout()
+5025.8s 280 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5025.8s 281 plt.tight_layout()
+5025.8s 282 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5025.8s 283 plt.tight_layout()
+5025.8s 284 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5025.8s 285 plt.tight_layout()
+5025.8s 286 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5025.8s 287 plt.tight_layout()
+5025.8s 288 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5025.8s 289 plt.tight_layout()
+5025.8s 290 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5025.8s 291 plt.tight_layout()
+5025.8s 292 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5025.8s 293 plt.tight_layout()
+5025.8s 294 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5025.8s 295 plt.tight_layout()
+5025.8s 296 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5025.8s 297 plt.tight_layout()
+5025.8s 298 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5025.8s 299 plt.tight_layout()
+5025.8s 300 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5025.8s 301 plt.tight_layout()
+5025.8s 302 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5025.8s 303 plt.tight_layout()
+5025.8s 304 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5025.8s 305 plt.tight_layout()
+5025.9s 306 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5025.9s 307 plt.tight_layout()
+5025.9s 308 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5025.9s 309 plt.tight_layout()
+5025.9s 310 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5025.9s 311 plt.tight_layout()
+5025.9s 312 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5025.9s 313 plt.tight_layout()
+5025.9s 314 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5025.9s 315 plt.tight_layout()
+5025.9s 316 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5025.9s 317 plt.tight_layout()
+5025.9s 318 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5025.9s 319 plt.tight_layout()
+5025.9s 320 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5025.9s 321 plt.tight_layout()
+5025.9s 322 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5025.9s 323 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 324 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Matplotlib currently does not support Telugu natively.
+5025.9s 325 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 326 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5025.9s 327 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 328 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5025.9s 329 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 330 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5025.9s 331 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 332 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5025.9s 333 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 334 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5025.9s 335 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 336 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5025.9s 337 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 338 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5025.9s 339 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 340 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5025.9s 341 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 342 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5025.9s 343 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 344 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5025.9s 345 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 346 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5025.9s 347 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 348 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5025.9s 349 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 350 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5025.9s 351 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 352 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5025.9s 353 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 354 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5025.9s 355 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 356 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5025.9s 357 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 358 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5025.9s 359 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 360 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5025.9s 361 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 362 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5025.9s 363 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 364 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5025.9s 365 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 366 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5025.9s 367 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 368 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5025.9s 369 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 370 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5025.9s 371 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 372 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5025.9s 373 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 374 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5025.9s 375 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 376 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5025.9s 377 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 378 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5025.9s 379 fig.canvas.print_figure(bytes_io, **kw)
+5025.9s 380 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5025.9s 381 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 382 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5026.3s 383 plt.tight_layout()
+5026.3s 384 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Matplotlib currently does not support Telugu natively.
+5026.3s 385 plt.tight_layout()
+5026.3s 386 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5026.3s 387 plt.tight_layout()
+5026.3s 388 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5026.3s 389 plt.tight_layout()
+5026.3s 390 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5026.3s 391 plt.tight_layout()
+5026.3s 392 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5026.3s 393 plt.tight_layout()
+5026.3s 394 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5026.3s 395 plt.tight_layout()
+5026.3s 396 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5026.3s 397 plt.tight_layout()
+5026.3s 398 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5026.3s 399 plt.tight_layout()
+5026.3s 400 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5026.3s 401 plt.tight_layout()
+5026.3s 402 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5026.3s 403 plt.tight_layout()
+5026.3s 404 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5026.3s 405 plt.tight_layout()
+5026.3s 406 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5026.3s 407 plt.tight_layout()
+5026.3s 408 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5026.3s 409 plt.tight_layout()
+5026.3s 410 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5026.3s 411 plt.tight_layout()
+5026.3s 412 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5026.3s 413 plt.tight_layout()
+5026.3s 414 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5026.3s 415 plt.tight_layout()
+5026.3s 416 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5026.3s 417 plt.tight_layout()
+5026.3s 418 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5026.3s 419 plt.tight_layout()
+5026.3s 420 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5026.3s 421 plt.tight_layout()
+5026.3s 422 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5026.3s 423 plt.tight_layout()
+5026.3s 424 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5026.3s 425 plt.tight_layout()
+5026.3s 426 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5026.3s 427 plt.tight_layout()
+5026.3s 428 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5026.3s 429 plt.tight_layout()
+5026.3s 430 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5026.3s 431 plt.tight_layout()
+5026.3s 432 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5026.3s 433 plt.tight_layout()
+5026.3s 434 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5026.3s 435 plt.tight_layout()
+5026.3s 436 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5026.3s 437 plt.tight_layout()
+5026.3s 438 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5026.3s 439 plt.tight_layout()
+5026.3s 440 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5026.3s 441 plt.tight_layout()
+5026.3s 442 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5026.3s 443 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 444 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Matplotlib currently does not support Telugu natively.
+5026.3s 445 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 446 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5026.3s 447 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 448 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5026.3s 449 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 450 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5026.3s 451 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 452 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5026.3s 453 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 454 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5026.3s 455 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 456 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5026.3s 457 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 458 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5026.3s 459 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 460 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5026.3s 461 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 462 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5026.3s 463 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 464 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5026.3s 465 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 466 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5026.3s 467 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 468 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5026.3s 469 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 470 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5026.3s 471 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 472 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5026.3s 473 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 474 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5026.3s 475 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 476 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5026.3s 477 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 478 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5026.3s 479 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 480 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5026.3s 481 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 482 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5026.3s 483 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 484 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5026.3s 485 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 486 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5026.3s 487 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 488 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5026.3s 489 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 490 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5026.3s 491 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 492 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5026.3s 493 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 494 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5026.3s 495 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 496 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5026.3s 497 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 498 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5026.3s 499 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 500 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5026.3s 501 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 502 
+5026.3s 503 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5026.3s 504 plt.tight_layout()
+5026.3s 505 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Matplotlib currently does not support Telugu natively.
+5026.3s 506 plt.tight_layout()
+5026.3s 507 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5026.3s 508 plt.tight_layout()
+5026.3s 509 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5026.3s 510 plt.tight_layout()
+5026.3s 511 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5026.3s 512 plt.tight_layout()
+5026.3s 513 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5026.3s 514 plt.tight_layout()
+5026.3s 515 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5026.3s 516 plt.tight_layout()
+5026.3s 517 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5026.3s 518 plt.tight_layout()
+5026.3s 519 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5026.3s 520 plt.tight_layout()
+5026.3s 521 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5026.3s 522 plt.tight_layout()
+5026.3s 523 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5026.3s 524 plt.tight_layout()
+5026.3s 525 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5026.3s 526 plt.tight_layout()
+5026.3s 527 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5026.3s 528 plt.tight_layout()
+5026.3s 529 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5026.3s 530 plt.tight_layout()
+5026.3s 531 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5026.3s 532 plt.tight_layout()
+5026.3s 533 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5026.3s 534 plt.tight_layout()
+5026.3s 535 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5026.3s 536 plt.tight_layout()
+5026.3s 537 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5026.3s 538 plt.tight_layout()
+5026.3s 539 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5026.3s 540 plt.tight_layout()
+5026.3s 541 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5026.3s 542 plt.tight_layout()
+5026.3s 543 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5026.3s 544 plt.tight_layout()
+5026.3s 545 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5026.3s 546 plt.tight_layout()
+5026.3s 547 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5026.3s 548 plt.tight_layout()
+5026.3s 549 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5026.3s 550 plt.tight_layout()
+5026.3s 551 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5026.3s 552 plt.tight_layout()
+5026.3s 553 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5026.3s 554 plt.tight_layout()
+5026.3s 555 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5026.3s 556 plt.tight_layout()
+5026.3s 557 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5026.3s 558 plt.tight_layout()
+5026.3s 559 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5026.3s 560 plt.tight_layout()
+5026.3s 561 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5026.3s 562 plt.tight_layout()
+5026.3s 563 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5026.3s 564 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 565 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Matplotlib currently does not support Telugu natively.
+5026.3s 566 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 567 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5026.3s 568 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 569 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5026.3s 570 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 571 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5026.3s 572 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 573 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5026.3s 574 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 575 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5026.3s 576 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 577 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5026.3s 578 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 579 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5026.3s 580 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 581 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5026.3s 582 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 583 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5026.3s 584 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 585 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5026.3s 586 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 587 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5026.3s 588 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 589 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5026.3s 590 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 591 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5026.3s 592 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 593 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5026.3s 594 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 595 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5026.3s 596 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 597 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5026.3s 598 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 599 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5026.3s 600 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 601 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5026.3s 602 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 603 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5026.3s 604 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 605 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5026.3s 606 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 607 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5026.3s 608 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 609 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5026.3s 610 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 611 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5026.3s 612 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 613 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5026.3s 614 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 615 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5026.3s 616 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 617 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5026.3s 618 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 619 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5026.3s 620 fig.canvas.print_figure(bytes_io, **kw)
+5026.3s 621 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5026.3s 622 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 623 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5026.8s 624 plt.tight_layout()
+5026.8s 625 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Matplotlib currently does not support Telugu natively.
+5026.8s 626 plt.tight_layout()
+5026.8s 627 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5026.8s 628 plt.tight_layout()
+5026.8s 629 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5026.8s 630 plt.tight_layout()
+5026.8s 631 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5026.8s 632 plt.tight_layout()
+5026.8s 633 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5026.8s 634 plt.tight_layout()
+5026.8s 635 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5026.8s 636 plt.tight_layout()
+5026.8s 637 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5026.8s 638 plt.tight_layout()
+5026.8s 639 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5026.8s 640 plt.tight_layout()
+5026.8s 641 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5026.8s 642 plt.tight_layout()
+5026.8s 643 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5026.8s 644 plt.tight_layout()
+5026.8s 645 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5026.8s 646 plt.tight_layout()
+5026.8s 647 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5026.8s 648 plt.tight_layout()
+5026.8s 649 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5026.8s 650 plt.tight_layout()
+5026.8s 651 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5026.8s 652 plt.tight_layout()
+5026.8s 653 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5026.8s 654 plt.tight_layout()
+5026.8s 655 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5026.8s 656 plt.tight_layout()
+5026.8s 657 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5026.8s 658 plt.tight_layout()
+5026.8s 659 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5026.8s 660 plt.tight_layout()
+5026.8s 661 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5026.8s 662 plt.tight_layout()
+5026.8s 663 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5026.8s 664 plt.tight_layout()
+5026.8s 665 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5026.8s 666 plt.tight_layout()
+5026.8s 667 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5026.8s 668 plt.tight_layout()
+5026.8s 669 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5026.8s 670 plt.tight_layout()
+5026.8s 671 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5026.8s 672 plt.tight_layout()
+5026.8s 673 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5026.8s 674 plt.tight_layout()
+5026.8s 675 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5026.8s 676 plt.tight_layout()
+5026.8s 677 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5026.8s 678 plt.tight_layout()
+5026.8s 679 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5026.8s 680 plt.tight_layout()
+5026.8s 681 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5026.8s 682 plt.tight_layout()
+5026.8s 683 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5026.8s 684 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 685 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Matplotlib currently does not support Telugu natively.
+5026.8s 686 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 687 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5026.8s 688 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 689 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5026.8s 690 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 691 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5026.8s 692 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 693 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5026.8s 694 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 695 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5026.8s 696 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 697 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5026.8s 698 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 699 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5026.8s 700 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 701 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5026.8s 702 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 703 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5026.8s 704 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 705 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5026.8s 706 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 707 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5026.8s 708 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 709 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5026.8s 710 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 711 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5026.8s 712 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 713 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5026.8s 714 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 715 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5026.8s 716 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 717 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5026.8s 718 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 719 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5026.8s 720 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 721 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5026.8s 722 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 723 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5026.8s 724 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 725 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5026.8s 726 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 727 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5026.8s 728 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 729 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5026.8s 730 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 731 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5026.8s 732 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 733 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5026.8s 734 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 735 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5026.8s 736 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 737 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5026.8s 738 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 739 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5026.8s 740 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 741 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5026.8s 742 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 743 
+5026.8s 744 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5026.8s 745 plt.tight_layout()
+5026.8s 746 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Matplotlib currently does not support Telugu natively.
+5026.8s 747 plt.tight_layout()
+5026.8s 748 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5026.8s 749 plt.tight_layout()
+5026.8s 750 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5026.8s 751 plt.tight_layout()
+5026.8s 752 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5026.8s 753 plt.tight_layout()
+5026.8s 754 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5026.8s 755 plt.tight_layout()
+5026.8s 756 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5026.8s 757 plt.tight_layout()
+5026.8s 758 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5026.8s 759 plt.tight_layout()
+5026.8s 760 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5026.8s 761 plt.tight_layout()
+5026.8s 762 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5026.8s 763 plt.tight_layout()
+5026.8s 764 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5026.8s 765 plt.tight_layout()
+5026.8s 766 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5026.8s 767 plt.tight_layout()
+5026.8s 768 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5026.8s 769 plt.tight_layout()
+5026.8s 770 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5026.8s 771 plt.tight_layout()
+5026.8s 772 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5026.8s 773 plt.tight_layout()
+5026.8s 774 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5026.8s 775 plt.tight_layout()
+5026.8s 776 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5026.8s 777 plt.tight_layout()
+5026.8s 778 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5026.8s 779 plt.tight_layout()
+5026.8s 780 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5026.8s 781 plt.tight_layout()
+5026.8s 782 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5026.8s 783 plt.tight_layout()
+5026.8s 784 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5026.8s 785 plt.tight_layout()
+5026.8s 786 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5026.8s 787 plt.tight_layout()
+5026.8s 788 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5026.8s 789 plt.tight_layout()
+5026.8s 790 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5026.8s 791 plt.tight_layout()
+5026.8s 792 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5026.8s 793 plt.tight_layout()
+5026.8s 794 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5026.8s 795 plt.tight_layout()
+5026.8s 796 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5026.8s 797 plt.tight_layout()
+5026.8s 798 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5026.8s 799 plt.tight_layout()
+5026.8s 800 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5026.8s 801 plt.tight_layout()
+5026.8s 802 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5026.8s 803 plt.tight_layout()
+5026.8s 804 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5026.8s 805 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 806 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Matplotlib currently does not support Telugu natively.
+5026.8s 807 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 808 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5026.8s 809 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 810 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5026.8s 811 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 812 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5026.8s 813 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 814 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5026.8s 815 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 816 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5026.8s 817 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 818 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5026.8s 819 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 820 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5026.8s 821 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 822 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5026.8s 823 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 824 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5026.8s 825 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 826 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5026.8s 827 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 828 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5026.8s 829 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 830 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5026.8s 831 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 832 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5026.8s 833 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 834 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5026.8s 835 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 836 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5026.8s 837 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 838 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5026.8s 839 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 840 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5026.8s 841 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 842 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5026.8s 843 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 844 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5026.8s 845 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 846 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5026.8s 847 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 848 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5026.8s 849 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 850 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5026.8s 851 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 852 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5026.8s 853 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 854 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5026.8s 855 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 856 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5026.8s 857 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 858 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5026.8s 859 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 860 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5026.8s 861 fig.canvas.print_figure(bytes_io, **kw)
+5026.8s 862 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5026.8s 863 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 864 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5027.2s 865 plt.tight_layout()
+5027.2s 866 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Matplotlib currently does not support Telugu natively.
+5027.2s 867 plt.tight_layout()
+5027.2s 868 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5027.2s 869 plt.tight_layout()
+5027.2s 870 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5027.2s 871 plt.tight_layout()
+5027.2s 872 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5027.2s 873 plt.tight_layout()
+5027.2s 874 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5027.2s 875 plt.tight_layout()
+5027.2s 876 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5027.2s 877 plt.tight_layout()
+5027.2s 878 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5027.2s 879 plt.tight_layout()
+5027.2s 880 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5027.2s 881 plt.tight_layout()
+5027.2s 882 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5027.2s 883 plt.tight_layout()
+5027.2s 884 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5027.2s 885 plt.tight_layout()
+5027.2s 886 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5027.2s 887 plt.tight_layout()
+5027.2s 888 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5027.2s 889 plt.tight_layout()
+5027.2s 890 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5027.2s 891 plt.tight_layout()
+5027.2s 892 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5027.2s 893 plt.tight_layout()
+5027.2s 894 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5027.2s 895 plt.tight_layout()
+5027.2s 896 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5027.2s 897 plt.tight_layout()
+5027.2s 898 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5027.2s 899 plt.tight_layout()
+5027.2s 900 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5027.2s 901 plt.tight_layout()
+5027.2s 902 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5027.2s 903 plt.tight_layout()
+5027.2s 904 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5027.2s 905 plt.tight_layout()
+5027.2s 906 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5027.2s 907 plt.tight_layout()
+5027.2s 908 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5027.2s 909 plt.tight_layout()
+5027.2s 910 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5027.2s 911 plt.tight_layout()
+5027.2s 912 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5027.2s 913 plt.tight_layout()
+5027.2s 914 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5027.2s 915 plt.tight_layout()
+5027.2s 916 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5027.2s 917 plt.tight_layout()
+5027.2s 918 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5027.2s 919 plt.tight_layout()
+5027.2s 920 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5027.2s 921 plt.tight_layout()
+5027.2s 922 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5027.2s 923 plt.tight_layout()
+5027.2s 924 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5027.2s 925 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 926 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Matplotlib currently does not support Telugu natively.
+5027.2s 927 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 928 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5027.2s 929 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 930 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5027.2s 931 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 932 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5027.2s 933 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 934 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5027.2s 935 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 936 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5027.2s 937 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 938 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5027.2s 939 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 940 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5027.2s 941 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 942 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5027.2s 943 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 944 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5027.2s 945 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 946 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5027.2s 947 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 948 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5027.2s 949 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 950 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5027.2s 951 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 952 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5027.2s 953 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 954 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5027.2s 955 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 956 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5027.2s 957 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 958 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5027.2s 959 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 960 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5027.2s 961 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 962 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5027.2s 963 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 964 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5027.2s 965 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 966 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5027.2s 967 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 968 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5027.2s 969 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 970 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5027.2s 971 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 972 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5027.2s 973 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 974 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5027.2s 975 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 976 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5027.2s 977 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 978 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5027.2s 979 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 980 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5027.2s 981 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 982 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5027.2s 983 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 984 
+5027.2s 985 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5027.2s 986 plt.tight_layout()
+5027.2s 987 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Matplotlib currently does not support Telugu natively.
+5027.2s 988 plt.tight_layout()
+5027.2s 989 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5027.2s 990 plt.tight_layout()
+5027.2s 991 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5027.2s 992 plt.tight_layout()
+5027.2s 993 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5027.2s 994 plt.tight_layout()
+5027.2s 995 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5027.2s 996 plt.tight_layout()
+5027.2s 997 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5027.2s 998 plt.tight_layout()
+5027.2s 999 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5027.2s 1000 plt.tight_layout()
+5027.2s 1001 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5027.2s 1002 plt.tight_layout()
+5027.2s 1003 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5027.2s 1004 plt.tight_layout()
+5027.2s 1005 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5027.2s 1006 plt.tight_layout()
+5027.2s 1007 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5027.2s 1008 plt.tight_layout()
+5027.2s 1009 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5027.2s 1010 plt.tight_layout()
+5027.2s 1011 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5027.2s 1012 plt.tight_layout()
+5027.2s 1013 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5027.2s 1014 plt.tight_layout()
+5027.2s 1015 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5027.2s 1016 plt.tight_layout()
+5027.2s 1017 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5027.2s 1018 plt.tight_layout()
+5027.2s 1019 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5027.2s 1020 plt.tight_layout()
+5027.2s 1021 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5027.2s 1022 plt.tight_layout()
+5027.2s 1023 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5027.2s 1024 plt.tight_layout()
+5027.2s 1025 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5027.2s 1026 plt.tight_layout()
+5027.2s 1027 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5027.2s 1028 plt.tight_layout()
+5027.2s 1029 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5027.2s 1030 plt.tight_layout()
+5027.2s 1031 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5027.2s 1032 plt.tight_layout()
+5027.2s 1033 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5027.2s 1034 plt.tight_layout()
+5027.2s 1035 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5027.2s 1036 plt.tight_layout()
+5027.2s 1037 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5027.2s 1038 plt.tight_layout()
+5027.2s 1039 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5027.2s 1040 plt.tight_layout()
+5027.2s 1041 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5027.2s 1042 plt.tight_layout()
+5027.2s 1043 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5027.2s 1044 plt.tight_layout()
+5027.2s 1045 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5027.2s 1046 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1047 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Matplotlib currently does not support Telugu natively.
+5027.2s 1048 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1049 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5027.2s 1050 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1051 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5027.2s 1052 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1053 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5027.2s 1054 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1055 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5027.2s 1056 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1057 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5027.2s 1058 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1059 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5027.2s 1060 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1061 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5027.2s 1062 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1063 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5027.2s 1064 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1065 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5027.2s 1066 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1067 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5027.2s 1068 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1069 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5027.2s 1070 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1071 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5027.2s 1072 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1073 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5027.2s 1074 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1075 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5027.2s 1076 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1077 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5027.2s 1078 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1079 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5027.2s 1080 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1081 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5027.2s 1082 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1083 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5027.2s 1084 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1085 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5027.2s 1086 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1087 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5027.2s 1088 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1089 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5027.2s 1090 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1091 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5027.2s 1092 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1093 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5027.2s 1094 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1095 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5027.2s 1096 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1097 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5027.2s 1098 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1099 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5027.2s 1100 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1101 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5027.2s 1102 fig.canvas.print_figure(bytes_io, **kw)
+5027.2s 1103 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5027.2s 1104 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1105 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5027.6s 1106 plt.tight_layout()
+5027.6s 1107 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Matplotlib currently does not support Telugu natively.
+5027.6s 1108 plt.tight_layout()
+5027.6s 1109 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5027.6s 1110 plt.tight_layout()
+5027.6s 1111 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5027.6s 1112 plt.tight_layout()
+5027.6s 1113 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5027.6s 1114 plt.tight_layout()
+5027.6s 1115 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5027.6s 1116 plt.tight_layout()
+5027.6s 1117 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5027.6s 1118 plt.tight_layout()
+5027.6s 1119 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5027.6s 1120 plt.tight_layout()
+5027.6s 1121 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5027.6s 1122 plt.tight_layout()
+5027.6s 1123 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5027.6s 1124 plt.tight_layout()
+5027.6s 1125 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5027.6s 1126 plt.tight_layout()
+5027.6s 1127 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5027.6s 1128 plt.tight_layout()
+5027.6s 1129 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5027.6s 1130 plt.tight_layout()
+5027.6s 1131 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5027.6s 1132 plt.tight_layout()
+5027.6s 1133 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5027.6s 1134 plt.tight_layout()
+5027.6s 1135 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5027.6s 1136 plt.tight_layout()
+5027.6s 1137 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5027.6s 1138 plt.tight_layout()
+5027.6s 1139 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5027.6s 1140 plt.tight_layout()
+5027.6s 1141 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5027.6s 1142 plt.tight_layout()
+5027.6s 1143 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5027.6s 1144 plt.tight_layout()
+5027.6s 1145 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5027.6s 1146 plt.tight_layout()
+5027.6s 1147 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5027.6s 1148 plt.tight_layout()
+5027.6s 1149 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5027.6s 1150 plt.tight_layout()
+5027.6s 1151 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5027.6s 1152 plt.tight_layout()
+5027.6s 1153 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5027.6s 1154 plt.tight_layout()
+5027.6s 1155 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5027.6s 1156 plt.tight_layout()
+5027.6s 1157 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5027.6s 1158 plt.tight_layout()
+5027.6s 1159 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5027.6s 1160 plt.tight_layout()
+5027.6s 1161 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5027.6s 1162 plt.tight_layout()
+5027.6s 1163 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5027.6s 1164 plt.tight_layout()
+5027.6s 1165 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5027.6s 1166 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1167 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Matplotlib currently does not support Telugu natively.
+5027.6s 1168 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1169 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5027.6s 1170 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1171 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5027.6s 1172 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1173 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5027.6s 1174 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1175 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5027.6s 1176 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1177 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5027.6s 1178 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1179 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5027.6s 1180 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1181 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5027.6s 1182 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1183 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5027.6s 1184 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1185 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5027.6s 1186 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1187 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5027.6s 1188 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1189 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5027.6s 1190 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1191 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5027.6s 1192 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1193 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5027.6s 1194 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1195 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5027.6s 1196 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1197 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5027.6s 1198 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1199 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5027.6s 1200 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1201 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5027.6s 1202 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1203 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5027.6s 1204 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1205 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5027.6s 1206 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1207 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5027.6s 1208 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1209 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5027.6s 1210 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1211 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5027.6s 1212 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1213 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5027.6s 1214 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1215 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5027.6s 1216 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1217 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5027.6s 1218 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1219 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5027.6s 1220 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1221 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5027.6s 1222 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1223 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5027.6s 1224 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1225 
+5027.6s 1226 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5027.6s 1227 plt.tight_layout()
+5027.6s 1228 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Matplotlib currently does not support Telugu natively.
+5027.6s 1229 plt.tight_layout()
+5027.6s 1230 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5027.6s 1231 plt.tight_layout()
+5027.6s 1232 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5027.6s 1233 plt.tight_layout()
+5027.6s 1234 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5027.6s 1235 plt.tight_layout()
+5027.6s 1236 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5027.6s 1237 plt.tight_layout()
+5027.6s 1238 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5027.6s 1239 plt.tight_layout()
+5027.6s 1240 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5027.6s 1241 plt.tight_layout()
+5027.6s 1242 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5027.6s 1243 plt.tight_layout()
+5027.6s 1244 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5027.6s 1245 plt.tight_layout()
+5027.6s 1246 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5027.6s 1247 plt.tight_layout()
+5027.6s 1248 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5027.6s 1249 plt.tight_layout()
+5027.6s 1250 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5027.6s 1251 plt.tight_layout()
+5027.6s 1252 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5027.6s 1253 plt.tight_layout()
+5027.6s 1254 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5027.6s 1255 plt.tight_layout()
+5027.6s 1256 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5027.6s 1257 plt.tight_layout()
+5027.6s 1258 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5027.6s 1259 plt.tight_layout()
+5027.6s 1260 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5027.6s 1261 plt.tight_layout()
+5027.6s 1262 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5027.6s 1263 plt.tight_layout()
+5027.6s 1264 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5027.6s 1265 plt.tight_layout()
+5027.6s 1266 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5027.6s 1267 plt.tight_layout()
+5027.6s 1268 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5027.6s 1269 plt.tight_layout()
+5027.6s 1270 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5027.6s 1271 plt.tight_layout()
+5027.6s 1272 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5027.6s 1273 plt.tight_layout()
+5027.6s 1274 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5027.6s 1275 plt.tight_layout()
+5027.6s 1276 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5027.6s 1277 plt.tight_layout()
+5027.6s 1278 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5027.6s 1279 plt.tight_layout()
+5027.6s 1280 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5027.6s 1281 plt.tight_layout()
+5027.6s 1282 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5027.6s 1283 plt.tight_layout()
+5027.6s 1284 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5027.6s 1285 plt.tight_layout()
+5027.6s 1286 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5027.6s 1287 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1288 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Matplotlib currently does not support Telugu natively.
+5027.6s 1289 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1290 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5027.6s 1291 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1292 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5027.6s 1293 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1294 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5027.6s 1295 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1296 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5027.6s 1297 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1298 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5027.6s 1299 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1300 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5027.6s 1301 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1302 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5027.6s 1303 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1304 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5027.6s 1305 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1306 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5027.6s 1307 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1308 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5027.6s 1309 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1310 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5027.6s 1311 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1312 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5027.6s 1313 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1314 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5027.6s 1315 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1316 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5027.6s 1317 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1318 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5027.6s 1319 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1320 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5027.6s 1321 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1322 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5027.6s 1323 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1324 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5027.6s 1325 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1326 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5027.6s 1327 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1328 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5027.6s 1329 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1330 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5027.6s 1331 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1332 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5027.6s 1333 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1334 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5027.6s 1335 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1336 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5027.6s 1337 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1338 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5027.6s 1339 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1340 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5027.6s 1341 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1342 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5027.6s 1343 fig.canvas.print_figure(bytes_io, **kw)
+5027.6s 1344 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5027.6s 1345 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1346 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5027.9s 1347 plt.tight_layout()
+5027.9s 1348 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Matplotlib currently does not support Telugu natively.
+5027.9s 1349 plt.tight_layout()
+5027.9s 1350 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5027.9s 1351 plt.tight_layout()
+5027.9s 1352 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5027.9s 1353 plt.tight_layout()
+5027.9s 1354 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5027.9s 1355 plt.tight_layout()
+5027.9s 1356 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5027.9s 1357 plt.tight_layout()
+5027.9s 1358 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5027.9s 1359 plt.tight_layout()
+5027.9s 1360 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5027.9s 1361 plt.tight_layout()
+5027.9s 1362 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5027.9s 1363 plt.tight_layout()
+5027.9s 1364 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5027.9s 1365 plt.tight_layout()
+5027.9s 1366 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5027.9s 1367 plt.tight_layout()
+5027.9s 1368 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5027.9s 1369 plt.tight_layout()
+5027.9s 1370 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5027.9s 1371 plt.tight_layout()
+5027.9s 1372 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5027.9s 1373 plt.tight_layout()
+5027.9s 1374 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5027.9s 1375 plt.tight_layout()
+5027.9s 1376 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5027.9s 1377 plt.tight_layout()
+5027.9s 1378 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5027.9s 1379 plt.tight_layout()
+5027.9s 1380 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5027.9s 1381 plt.tight_layout()
+5027.9s 1382 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5027.9s 1383 plt.tight_layout()
+5027.9s 1384 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5027.9s 1385 plt.tight_layout()
+5027.9s 1386 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5027.9s 1387 plt.tight_layout()
+5027.9s 1388 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5027.9s 1389 plt.tight_layout()
+5027.9s 1390 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5027.9s 1391 plt.tight_layout()
+5027.9s 1392 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5027.9s 1393 plt.tight_layout()
+5027.9s 1394 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5027.9s 1395 plt.tight_layout()
+5027.9s 1396 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5027.9s 1397 plt.tight_layout()
+5027.9s 1398 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5027.9s 1399 plt.tight_layout()
+5027.9s 1400 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5027.9s 1401 plt.tight_layout()
+5027.9s 1402 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5027.9s 1403 plt.tight_layout()
+5027.9s 1404 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5027.9s 1405 plt.tight_layout()
+5027.9s 1406 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5027.9s 1407 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1408 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Matplotlib currently does not support Telugu natively.
+5027.9s 1409 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1410 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5027.9s 1411 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1412 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5027.9s 1413 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1414 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5027.9s 1415 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1416 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5027.9s 1417 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1418 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5027.9s 1419 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1420 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5027.9s 1421 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1422 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5027.9s 1423 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1424 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5027.9s 1425 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1426 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5027.9s 1427 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1428 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5027.9s 1429 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1430 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5027.9s 1431 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1432 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5027.9s 1433 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1434 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5027.9s 1435 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1436 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5027.9s 1437 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1438 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5027.9s 1439 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1440 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5027.9s 1441 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1442 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5027.9s 1443 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1444 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5027.9s 1445 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1446 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5027.9s 1447 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1448 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5027.9s 1449 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1450 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5027.9s 1451 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1452 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5027.9s 1453 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1454 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5027.9s 1455 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1456 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5027.9s 1457 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1458 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5027.9s 1459 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1460 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5027.9s 1461 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1462 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5027.9s 1463 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1464 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5027.9s 1465 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1466 
+5027.9s 1467 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5027.9s 1468 plt.tight_layout()
+5027.9s 1469 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Matplotlib currently does not support Telugu natively.
+5027.9s 1470 plt.tight_layout()
+5027.9s 1471 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5027.9s 1472 plt.tight_layout()
+5027.9s 1473 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5027.9s 1474 plt.tight_layout()
+5027.9s 1475 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5027.9s 1476 plt.tight_layout()
+5027.9s 1477 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5027.9s 1478 plt.tight_layout()
+5027.9s 1479 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5027.9s 1480 plt.tight_layout()
+5027.9s 1481 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5027.9s 1482 plt.tight_layout()
+5027.9s 1483 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5027.9s 1484 plt.tight_layout()
+5027.9s 1485 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5027.9s 1486 plt.tight_layout()
+5027.9s 1487 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5027.9s 1488 plt.tight_layout()
+5027.9s 1489 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5027.9s 1490 plt.tight_layout()
+5027.9s 1491 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5027.9s 1492 plt.tight_layout()
+5027.9s 1493 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5027.9s 1494 plt.tight_layout()
+5027.9s 1495 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5027.9s 1496 plt.tight_layout()
+5027.9s 1497 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5027.9s 1498 plt.tight_layout()
+5027.9s 1499 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5027.9s 1500 plt.tight_layout()
+5027.9s 1501 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5027.9s 1502 plt.tight_layout()
+5027.9s 1503 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5027.9s 1504 plt.tight_layout()
+5027.9s 1505 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5027.9s 1506 plt.tight_layout()
+5027.9s 1507 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5027.9s 1508 plt.tight_layout()
+5027.9s 1509 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5027.9s 1510 plt.tight_layout()
+5027.9s 1511 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5027.9s 1512 plt.tight_layout()
+5027.9s 1513 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5027.9s 1514 plt.tight_layout()
+5027.9s 1515 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5027.9s 1516 plt.tight_layout()
+5027.9s 1517 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5027.9s 1518 plt.tight_layout()
+5027.9s 1519 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5027.9s 1520 plt.tight_layout()
+5027.9s 1521 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5027.9s 1522 plt.tight_layout()
+5027.9s 1523 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5027.9s 1524 plt.tight_layout()
+5027.9s 1525 /tmp/ipykernel_23/3571539726.py:35: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5027.9s 1526 plt.tight_layout()
+5027.9s 1527 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3110 (\N{TELUGU LETTER DA}) missing from font(s) DejaVu Sans.
+5027.9s 1528 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1529 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Matplotlib currently does not support Telugu natively.
+5027.9s 1530 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1531 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3136 (\N{TELUGU VOWEL SIGN II}) missing from font(s) DejaVu Sans.
+5027.9s 1532 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1533 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3112 (\N{TELUGU LETTER NA}) missing from font(s) DejaVu Sans.
+5027.9s 1534 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1535 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3135 (\N{TELUGU VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+5027.9s 1536 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1537 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3093 (\N{TELUGU LETTER KA}) missing from font(s) DejaVu Sans.
+5027.9s 1538 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1539 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3128 (\N{TELUGU LETTER SA}) missing from font(s) DejaVu Sans.
+5027.9s 1540 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1541 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3074 (\N{TELUGU SIGN ANUSVARA}) missing from font(s) DejaVu Sans.
+5027.9s 1542 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1543 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3116 (\N{TELUGU LETTER BA}) missing from font(s) DejaVu Sans.
+5027.9s 1544 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1545 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3111 (\N{TELUGU LETTER DHA}) missing from font(s) DejaVu Sans.
+5027.9s 1546 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1547 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3098 (\N{TELUGU LETTER CA}) missing from font(s) DejaVu Sans.
+5027.9s 1548 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1549 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3114 (\N{TELUGU LETTER PA}) missing from font(s) DejaVu Sans.
+5027.9s 1550 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1551 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3149 (\N{TELUGU SIGN VIRAMA}) missing from font(s) DejaVu Sans.
+5027.9s 1552 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1553 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3120 (\N{TELUGU LETTER RA}) missing from font(s) DejaVu Sans.
+5027.9s 1554 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1555 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3108 (\N{TELUGU LETTER TA}) missing from font(s) DejaVu Sans.
+5027.9s 1556 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1557 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3119 (\N{TELUGU LETTER YA}) missing from font(s) DejaVu Sans.
+5027.9s 1558 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1559 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3143 (\N{TELUGU VOWEL SIGN EE}) missing from font(s) DejaVu Sans.
+5027.9s 1560 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1561 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3134 (\N{TELUGU VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+5027.9s 1562 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1563 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3118 (\N{TELUGU LETTER MA}) missing from font(s) DejaVu Sans.
+5027.9s 1564 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1565 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3138 (\N{TELUGU VOWEL SIGN UU}) missing from font(s) DejaVu Sans.
+5027.9s 1566 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1567 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3146 (\N{TELUGU VOWEL SIGN O}) missing from font(s) DejaVu Sans.
+5027.9s 1568 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1569 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3137 (\N{TELUGU VOWEL SIGN U}) missing from font(s) DejaVu Sans.
+5027.9s 1570 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1571 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3103 (\N{TELUGU LETTER TTA}) missing from font(s) DejaVu Sans.
+5027.9s 1572 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1573 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3122 (\N{TELUGU LETTER LA}) missing from font(s) DejaVu Sans.
+5027.9s 1574 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1575 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3105 (\N{TELUGU LETTER DDA}) missing from font(s) DejaVu Sans.
+5027.9s 1576 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1577 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3125 (\N{TELUGU LETTER VA}) missing from font(s) DejaVu Sans.
+5027.9s 1578 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1579 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3117 (\N{TELUGU LETTER BHA}) missing from font(s) DejaVu Sans.
+5027.9s 1580 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1581 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3147 (\N{TELUGU VOWEL SIGN OO}) missing from font(s) DejaVu Sans.
+5027.9s 1582 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1583 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3095 (\N{TELUGU LETTER GA}) missing from font(s) DejaVu Sans.
+5027.9s 1584 fig.canvas.print_figure(bytes_io, **kw)
+5027.9s 1585 /usr/local/lib/python3.12/dist-packages/IPython/core/pylabtools.py:151: UserWarning: Glyph 3094 (\N{TELUGU LETTER KHA}) missing from font(s) DejaVu Sans.
+5027.9s 1586 fig.canvas.print_figure(bytes_io, **kw)
+5033.7s 1587 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+5033.7s 1588 cells[i][c] = re.sub('\\\\\|', '|', cell)
+5033.9s 1589 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+5033.9s 1590 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+5034.5s 1591 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+5034.8s 1592 [NbConvertApp] Writing 678372 bytes to __notebook__.ipynb
+5037.1s 1593 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+5038.1s 1594 [NbConvertApp] Support files will be in __results___files/
+5038.1s 1595 [NbConvertApp] Making directory __results___files
+5038.1s 1596 [NbConvertApp] Making directory __results___files
+5038.1s 1597 [NbConvertApp] Making directory __results___files
+5038.1s 1598 [NbConvertApp] Making directory __results___files
+5038.1s 1599 [NbConvertApp] Making directory __results___files
+5038.1s 1600 [NbConvertApp] Making directory __results___files
+5038.1s 1601 [NbConvertApp] Making directory __results___files
+5038.1s 1602 [NbConvertApp] Making directory __results___files
+5038.1s 1603 [NbConvertApp] Making directory __results___files
+5038.1s 1604 [NbConvertApp] Writing 631768 bytes to __results__.html
