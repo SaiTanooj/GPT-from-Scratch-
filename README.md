@@ -2,7 +2,6 @@
 
 A decoder-only GPT-style Transformer built end to end for two Indic languages: **Telugu** (high-resource, "Model H") and **Nepali** (low-resource, "Model L"). The project covers corpus collection, cleaning and deduplication at the scale of tens of millions of sentences, tokenizer training, pretraining a 12-layer Transformer, evaluation, mechanistic attention analysis, and fine-tuning on a synthetic multi-hop reasoning benchmark.
 
-> Course project (LMA Final Project) by **T Sai Tanooj**.
 
 ---
 
@@ -368,12 +367,11 @@ Epoch 2 was chosen as the best checkpoint by validation loss. The small validati
 |---|---|---|
 | T1 | 0.0 | 0.565 |
 | T2 | 0.0 | 0.340 |
-| T3 | 0.0 | 1.000 |
-| T4 | 0.0 | 1.000 |
-| T5 | 0.0 | 1.000 |
-| T6 | 0.0 | 1.000 |
-| **Overall** | **0.0** | **0.8175** |
-
+| T3 | 0.0 | 0.560 |
+| T4 | 0.0 | 0.35 |
+| T5 | 0.0 | 0.39 |
+| T6 | 0.0 | 0.45 |
+| **Overall** | **0.0** | **0.675** |
 **Attention findings (Telugu)**
 
 1. Layer 1 heatmaps are almost identical before and after fine-tuning.
@@ -391,11 +389,11 @@ Fine-tuning loss converged cleanly to about **0.15** by epoch 3, without the lat
 |---|---|---|
 | T1 | 0.0 | 0.540 |
 | T2 | 0.0 | 0.315 |
-| T3 | 0.0 | 1.000 |
-| T4 | 0.0 | 1.000 |
-| T5 | 0.0 | 1.000 |
-| T6 | 0.0 | 1.000 |
-| **Overall** | **0.0** | **0.809** (971 / 1,200) |
+| T3 | 0.0 | 0.540|
+| T4 | 0.0 | 0.450 |
+| T5 | 0.0 | 0.232 |
+| T6 | 0.0 | 0.345 |
+| **Overall** | **0.0** | **0.625 |
 
 **Attention findings (Nepali)**
 
