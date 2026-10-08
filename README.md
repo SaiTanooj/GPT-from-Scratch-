@@ -17,7 +17,7 @@ A decoder-only GPT-style Transformer built end to end for two Indic languages: *
 | Model | 12-layer, d=384, 8 heads, ~25.3M params | Same architecture |
 | Validation cross-entropy | 5.02 (perplexity 151.5, 0.66 BPB) | ≈5.3 |
 | Reasoning accuracy, pretrained (zero-shot) | 0.0% | 0.0% |
-| Reasoning accuracy, fine-tuned | **81.75%** | **80.9%** |
+| Reasoning accuracy, fine-tuned | **67.75%** | **62.5%** |
 
 Key things done in this project:
 
